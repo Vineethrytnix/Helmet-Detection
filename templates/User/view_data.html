@@ -1,0 +1,47 @@
+{% extends 'User/common.html' %}
+{% load static %}
+{% block header %}
+    <!-- OUR-Services-SECTION -->
+    <section class="contact-us">
+
+        <div class="container text-center my-5">
+            <div class="row">
+                <div class="col-12">
+                    <h6 class="autorix-text text-center">Detect Now</h6>
+                    <h2 class="text-center aos-init aos-animate" data-aos="fade-left">Upload Video To Detect Helmet</h2>
+                </div>
+            </div>
+            <table class="table table-bordered">
+                <thead>
+                    <tr>
+                        <th scope="col">Id</th>
+                        <th scope="col">Username</th>
+                        <th scope="col">Rider</th>
+                        <th scope="col">Number Plate</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    {% if view %}
+                    {% for i in view %}
+                    <tr>
+                        <th scope="row">{{i.id}}</th>
+                        <td>{{i.uid.name}}</td>
+                        <td><img src="/static/{{i.rider}}" alt="No Data" width="150px"></td>
+                        <td><img src="/static/{{i.numberplate}}" alt="" width="150px"></td>
+                    </tr>
+                    {% endfor %}
+                    {% else %}
+                    <tr>
+                        <th colspan="4">No Data</th>
+                    </tr>
+                    {% endif %}
+                    
+                </tbody>
+            </table>
+        </div>
+    </section>
+
+    <!-- Carousel-SECTION -->
+
+    <!-- Footer-Section -->
+ {% endblock %}

@@ -1,0 +1,50 @@
+{% extends 'common.html' %}
+{% load static %}
+{% block header %}
+<!-- Form-Section -->
+
+
+<style>
+    #inp{
+        background-color: aliceblue;
+        color: black;
+    }
+</style>
+
+<section class="">
+
+    <div class="container text-center my-5">
+        <div class="row">
+            <div class="col-12">
+                <h6 class="autorix-text text-center">Get Started Now</h6>
+                <h2 class="text-center aos-init aos-animate" data-aos="fade-left">Login</h2>
+            </div>
+        </div>
+        <form id="form_id" method="post">
+            {% csrf_token %}
+            <div class="contact-us-wrapper">
+                <div class="row p-5">
+                    <div class="col-lg-6 col-md-4 col-sm-12">
+                        <div class="">
+                            <input type="email" name="email" class="form-control input-fill" id="inp" required
+                                placeholder="Email">
+                        </div>
+                    </div>
+                    <div class="col-lg-6 col-md-4 col-sm-12">
+                        <div class="">
+                            <input type="password" name="password" class="form-control input-fill" id="inp" required
+                                placeholder="password">
+                        </div>
+                    </div>
+                </div>
+
+                <div class="form-btn">
+                    <button type="submit" class="btn btn-primary">Submit Now</button>
+                </div>
+            </div>
+        </form>
+    </div>
+</section>
+
+
+{% endblock %}
