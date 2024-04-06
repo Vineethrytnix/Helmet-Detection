@@ -5,11 +5,14 @@ from django.contrib import messages
 from main import process_video 
 import os
 # Create your views here.
-
+#Hii
 
 def index(request):
     
     return render(request, "index.html")
+# def index(request):
+    
+#     return render(request, "index.html")
 
 
 def log(request):
